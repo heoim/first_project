@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>favicon</title>
+  <link rel="stylesheet" href="./scss/main.scss" />
+  <!-- 파비콘 넣기 -->
+  <link rel="icon" href="./dist/favicon.png" type="image/x-icon"> 
+  <script defer src="./js/main.js"></script>
+  <style>
+    hr {width: 80%; margin: 2%;}
+    span {font-weight: bold; color:blue;}
+    pre {line-height: 1.5;}
+  </style>
+</head>
+<body>
+  <h3>바벨설치</h3>
+  <p>npm i -D @babel/core @babel/preset-env</p>
+  <p>npm i -D @babel/plugin-transform-runtime</p>
+  <p>npm init</p>
+  <p>git init : git 버전관리를 하겠다</p>
+  <p>git add :</p>
+  <p>git status : 상세확인</p>
+  <p>git commmution</p>
+  <p>git remote add.~</p>
+  <p>git remote origin</p>
+  <p>명령줄 인터페이스(CLI)는 Command-Line Interface</p>
+  <p>CRI : 이런 명령어를 넣어 실행하는 법</p>
+  <hr>
+  <pre>
+  <h3>package.json</h3>
+        {
+          "name": "parcel_bundler",
+          "version": "1.0.0",
+          "description": "This is first project - parcel-parcel_bundler",
+          "main": "index.js",
+          "scripts": {
+            "dev": "parcel index.html --port 8000",<span>--port 8000 : 8000번대의 서버를 만들어줌</span>
+            "build": "parcel build index.html"
+          },
+          "keywords": [],
+          "author": "",
+          "license": "ISC",
+          "devDependencies": {
+            "@babel/core": "^7.23.7", <span>6. babel은 안깔아도 되네 깊게 작업하기 위해 문법이 복잡해 지기 때문에 필요함.</span>
+            "@babel/plugin-transform-runtime": "^7.23.7", <span>6. 최신 문법으로 작성하나 예전 문법으로 실행됨.</span>
+            "@babel/preset-env": "^7.23.7", <span>6. 별도로 설치하지 않아도 되나 webpack에서는 필수</span>
+            "autoprefixer": "^9.8.8", <span>4</span>
+            "parcel-bundler": "^1.12.5", <span>1</span>
+            "parcel-plugin-static-files-copy": "^2.6.0", <span>2</span>
+            "postcss": "^8.4.32", <span>5. 8버전에서 같이 매칭이 되기 위해서는 autoprefixer 9버전이 있어야 함.</span>
+            "sass": "^1.69.5" <span>3</span>
+          },
+          "staticFiles": {
+            "staticPath": "static"
+          },
+          "Browserslist": [
+            "> 1%",
+            "last 2 version"
+          ]
+        }
+    </pre>
+</body>
+</html>

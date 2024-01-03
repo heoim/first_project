@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>payment</title>
+  
+</head>
+<body>
+  <form id="card-form" onsubmit="submitForm()">
+    <div>
+      <label>카드번호</label>
+      <input type="text" name="cardNumber">
+    </div>
+    <div>
+      <label>이름</label>
+      <input type="text" name="holderName">
+    </div>
+    <button type="submit">결재하기</button>
+  </form>
+  <script>function submitForm() {
+  var form = document.querySelector('#card-form');
+  var formData = new FormData(form);
+  var formObj = {
+    cardNumner: formData.get('cardNumber'),
+    holderName: formData.get('holderName')
+  };
+  window.parent.postMessage(formObj, '*'); //상단 두줄의 메세지
+}</script>
+</body>
+</html>
